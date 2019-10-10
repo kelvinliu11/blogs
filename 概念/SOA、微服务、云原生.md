@@ -109,3 +109,10 @@ Mesh[6] 实现灵活的 L2/L3 组网能力。我们相信其会成为未来企�
 [6] https://networkservicemesh.io/
 [7] https://blog.christianposta.com/microservices/application-safety-and-
 correctness-cannot-be-offloaded-to-istio-or-any-service-mesh/
+
+
+小结：  
++ 单体架构：技术僵硬难以迁移，**点对点调用；没有服务治理**。  
++ SOA：是从单体架构向服务架构的转变，还没有发展出软负载、断路器、流控等手段，所以当时使用ESB进行服务间连接、协议转换等。**点 -> ESB -> 点调用；服务治理集中依靠ESB**。  
++ 微服务：是使用代码库的形式，将各业务模块与技术模块整合，使其各个服务都具有原先ESB的功能并在此基础上进行扩展，为富客服端模式。**点对点调用；服务治理能力嵌入在各个微服务中**。
++ 云原生：重新将服务治理能力下沉到基础设施，在服务的消费者和提供者两侧以独立进程的方式部署。**看起来是点对点调用；服务治理能力集中依靠service mesh**

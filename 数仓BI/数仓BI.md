@@ -428,7 +428,8 @@ Inmon 的 EDW 的原则是准三范式的设计、Ralph kilmbal 是星型结构
 + 为何没有区分dwd和dws？
 上面已经回答过，因为模型选择不同。
 + 现在都有哪些库，各叫什么名字？命名规范是什么？
-raw_credit,clean,result
+现有的库为raw_credit（作为ODS层）,clean（作为EDW）,result（作为DM）
+另有数据分析团队共同协作，raw_credit（作为ODS层）为基础，对应的EDW库独享，如有数据需求提交给ETL团队进行开发并定期同步到数仓中进行分析
 推荐各层库表命名为:
 ods_应用系统缩写_数据表名
 dw_主题名（缩写）_功能描述
